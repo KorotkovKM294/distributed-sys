@@ -13,6 +13,7 @@ import static java.nio.file.Files.readAllBytes;
 public class PhotoController {
     @RequestMapping(value = "/img", produces = "image/jpeg")
     public byte[] getById(long id) throws IOException {
-        return readAllBytes(new File("D:/Koala.jpg").toPath());
+        return readAllBytes(new File("/Users/kirill/projects/mipt/distributed-systems/spring" +
+                "-cloud-discovery/test.jpg").toPath());
     }
 }
